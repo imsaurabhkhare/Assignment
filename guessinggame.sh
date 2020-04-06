@@ -1,15 +1,12 @@
 function guess {
-local count=0
-for code in $(ls -a)
-do
-let count=$count+1
-done
+local count=$(ls -a | wc -l)
+let count=$count-2
 echo $count
 }
 
 function input {
 read response
-if [[ $response =~ [A-Za-z] ]]
+if [[ ! $response =~ ^[1-9][0-9]*$ ]]
 then
 echo "incorrect input"
 else
