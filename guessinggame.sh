@@ -19,4 +19,4 @@ echo "guess was to high"
 read response
 fi
 done
-echo "currect guess"
+echo "correct guess"
