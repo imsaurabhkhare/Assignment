@@ -3,7 +3,6 @@ local count=$(ls -a | wc -l)
 let count=$count-2
 echo $count
 }
-
 function input {
 read response
 if [[ ! $response =~ ^[1-9][0-9]*$ ]]
@@ -13,7 +12,6 @@ else
 echo $response
 fi
 }
-
 echo "how many file in a directory "
 response=$(input)
 while [[ $response = "incorrect input" ]]
@@ -25,9 +23,9 @@ while [[ $response -ne $(guess) ]]
 do
 if [[ $response -lt $(guess) ]]
 then
-echo "guess was to low"
+echo "guess was to low, try again"
 else
-echo "guess was to high"
+echo "guess was to high, try again"
 fi
 response=$(input)
 while [[ $response = "incorrect input" ]]
@@ -36,4 +34,4 @@ echo "incorrect input"
 response=$(input)
 done
 done
-echo "correct guess"
+echo "Congratulations! You have guess correct number"
