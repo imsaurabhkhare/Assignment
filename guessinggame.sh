@@ -5,7 +5,7 @@ echo $count
 }
 function input {
 read response
-if [[ ! $response =~ ^[1-9][0-9]*$ ]]
+if [[ ! $response =~ 0|^[1-9][0-9]*$ ]]
 then
 echo "incorrect input"
 else
