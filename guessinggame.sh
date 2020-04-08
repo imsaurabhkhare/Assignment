@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function guess {
 local count=$(ls -a | wc -l)
 let count=$count-2
